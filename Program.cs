@@ -57,6 +57,7 @@ namespace tasks
             //Console.WriteLine("pleas enter the price  ");// asking the user to write a celsius 
             //price = int.Parse(Console.ReadLine());//save the celsius in the counter
             //if (price >100) {  discount = (price * 0.1);
+                   //price=price-discount
             //    Console.WriteLine(discount + " is  the  new price  "); }
             //else {
 
@@ -76,28 +77,28 @@ namespace tasks
             //{
 
 
-            //    Console.WriteLine(grade + "is yor grade  ");
+            //    Console.WriteLine(grade + "is yor grade A ");
 
             //}
             //else if (grade >= 80)
             //{
 
 
-            //    Console.WriteLine(grade + "is yor grade  ");
+            //    Console.WriteLine(grade + "is yor grade B  ");
 
             //}
             //else if (grade >= 70)
             //{
 
 
-            //    Console.WriteLine(grade + "is yor grade  ");
+            //    Console.WriteLine(grade + "is yor grade C ");
 
             //}
             //else if (grade >= 60)
             //{
 
 
-            //    Console.WriteLine(grade + "is yor grade  ");
+            //    Console.WriteLine(grade + "is yor grade D ");
 
             //}
             //else {
