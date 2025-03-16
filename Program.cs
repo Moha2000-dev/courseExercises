@@ -259,94 +259,89 @@ namespace tasks
 
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
-            //Console.Clear();
-            //Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
-            //    "3 for cheak balance \n4 to exsit  ");
-            //int choice = int.Parse(Console.ReadLine());
-            //double balance = 1000;
-            //switch (choice) { 
-
-            // case 1:
-            //        Console.WriteLine("pleas enter the amount you want to withdraw ");
-            //        double withdraw = double.Parse(Console.ReadLine());
-            //        if (withdraw > balance)
-            //        {
-            //            Console.WriteLine("no balance");
-            //        }
-            //        else
-            //        {
-            //            balance =balance- withdraw;
-            //            Console.WriteLine("your balanc " + balance);
-            //        }
-            //        break;
-            //    case 2:
-            //        Console.WriteLine("pleas enter the amount you want to deposit ");
-            //        double deposit = double.Parse(Console.ReadLine());
-            //        balance = balance+deposit;
-            //        Console.WriteLine("The balance after deposit is " + balance);
-            //        break;
-            //    case 3:
-            //        Console.WriteLine("The balance is " + balance);
-            //        break;
-            //    case 4:
-            //        break;
-            //    default:
-            //        Console.WriteLine("Invalid choice");
-            //        break;
-
-            //}
-            //]--------------------------------------------------------------------------------------------------------------------------------------------
-            string flage= "s";
-            do { 
             Console.Clear();
+            int flage=0;
+            do { 
+            
             Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
-                "3 for cheak balance\n 4 exsit ");
+                "3 for cheak balance \n4 to exsit  ");
             int choice = int.Parse(Console.ReadLine());
-             
-
-
-                switch (choice)
+            double balance = 1000;
+            switch (choice)
             {
 
-                case 1: // if the user enter number 1
-                    double pi = 3.14; // assingr the pi counter
-                    Console.WriteLine("pless enter the  radius "); // asking the user to write a number
-                    double radius = double.Parse(Console.ReadLine()); // save the number in the counter
-                    double area = pi * radius * radius;
-                    double circumference = 2 * pi * radius;
-                    Console.WriteLine("The area of the circle is " + area);// print the result
-                    Console.WriteLine("The circumference of the circle is " + circumference); // print the result
+                case 1:
+                    Console.WriteLine("pleas enter the amount you want to withdraw ");
+                    double withdraw = double.Parse(Console.ReadLine());
+                    if (withdraw > balance)
+                    {
+                        Console.WriteLine("no balance");
+                    }
+                    else
+                    {
+                        balance = balance - withdraw;
+                        Console.WriteLine("your balanc " + balance);
+                    }
                     break;
-                case 2: // if the user enter number 2
-                    Console.WriteLine("pleas enter the length ");
-                    double length = double.Parse(Console.ReadLine());
-                    Console.WriteLine("pleas enter the width ");
-                    double width = double.Parse(Console.ReadLine());
-                    double area1 = length * width;
-                    double perimeter = 2 * (length + width);
-                    Console.WriteLine("The area of the rectangle is " + area1);
-                    Console.WriteLine("The perimeter of the rectangle is " + perimeter);
+                case 2:
+                    Console.WriteLine("pleas enter the amount you want to deposit ");
+                    double deposit = double.Parse(Console.ReadLine());
+                    balance = balance + deposit;
+                    Console.WriteLine("The balance after deposit is " + balance);
                     break;
-                case 3:// if the user enter number 3
-                    Console.WriteLine("pleas enter the base ");
-                    double bases = double.Parse(Console.ReadLine());
-                    Console.WriteLine("pleas enter the height ");
-                    double height = double.Parse(Console.ReadLine());
-                    double area2 = 0.5 * bases * height;
-                    Console.WriteLine("The area of the triangle is " + area2);
+                case 3:
+                    Console.WriteLine("The balance is " + balance);
                     break;
-                    case 4:// if the user enter number 4
-                    flage = "y";
+                case 4:
+                        flage = 4;
                         break;
-
-
-                    default:// if the user enter a wrong choice
+                default:
                     Console.WriteLine("Invalid choice");
                     break;
 
             }
-               
-            } while (flage != "y");
+        } while (flage != 4);
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.Clear();
+            //Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+            //    "3 for cheak balance");
+            //int choice = int.Parse(Console.ReadLine());
+
+            //switch (choice)
+            //{
+
+            //    case 1: // if the user enter number 1
+            //        double pi = 3.14; // assingr the pi counter
+            //        Console.WriteLine("pless enter the  radius "); // asking the user to write a number
+            //        double radius = double.Parse(Console.ReadLine()); // save the number in the counter
+            //        double area = pi * radius * radius;
+            //        double circumference = 2 * pi * radius;
+            //        Console.WriteLine("The area of the circle is " + area);// print the result
+            //        Console.WriteLine("The circumference of the circle is " + circumference); // print the result
+            //        break;
+            //    case 2: // if the user enter number 2
+            //        Console.WriteLine("pleas enter the length ");
+            //        double length = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("pleas enter the width ");
+            //        double width = double.Parse(Console.ReadLine());
+            //        double area1 = length * width;
+            //        double perimeter = 2 * (length + width);
+            //        Console.WriteLine("The area of the rectangle is " + area1);
+            //        Console.WriteLine("The perimeter of the rectangle is " + perimeter);
+            //        break;
+            //    case 3:// if the user enter number 3
+            //        Console.WriteLine("pleas enter the base ");
+            //        double bases = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("pleas enter the height ");
+            //        double height = double.Parse(Console.ReadLine());
+            //        double area2 = 0.5 * bases * height;
+            //        Console.WriteLine("The area of the triangle is " + area2);
+            //        break;
+            //    default:// if the user enter a wrong choice
+            //        Console.WriteLine("Invalid choice");
+            //        break;
+
+            //}
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
             //Console.WriteLine("pleas enter the  factorial number  ");
