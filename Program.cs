@@ -418,18 +418,27 @@ namespace tasks
 
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
-            Console.WriteLine("pleas enter the number of P and print the angeld  ");
-            int starse = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= starse; i++)
-            {
+            //Console.WriteLine("pleas enter the number of starts and print the angeld  ");
+            //int starse = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= starse; i++)
+            //{
                
-                    Console.WriteLine(new string('*',i));
+            //        Console.WriteLine(new string('*',i));
                 
 
+            //}
+
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            Console.WriteLine("pleas enter the numper of stars  ");
+            int stars = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= stars; i++)
+            {
+               Console.WriteLine(new string(' ', stars - i) + new string('*', i*2-1) );
             }
 
-            //
 
-    }
+
+        }
     }
 }
