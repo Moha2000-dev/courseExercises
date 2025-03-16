@@ -346,26 +346,80 @@ namespace tasks
             //    fact= fact * i;
             //}
             //Console.WriteLine("The factorial of " + number +"\nis   "+fact);
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.WriteLine("pless enter a number ");// asking the user to write a number
+            //int number = int.Parse(Console.ReadLine());// save the number in the counter
+            //int sumOfEven = 0; // assingr the sum of even counter
+            //int sumOfOdd = 0;// assingr the sum of odd counter
+            //for (int i = 0; i <=number; i++) // loop to test the number
+            //{
+            //    if (i % 2 == 0) // test the number if it is an odd or even
+            //    {
+            //        sumOfEven = sumOfEven + i;
+            //    }
+            //    else
+            //    {
+            //        sumOfOdd = sumOfOdd + i;
+            //    }
 
-            Console.WriteLine("pless enter a number ");// asking the user to write a number
-            int number = int.Parse(Console.ReadLine());// save the number in the counter
-            int sumOfEven = 0; // assingr the sum of even counter
-            int sumOfOdd = 0;// assingr the sum of odd counter
-            for (int i = 0; i <=number; i++) // loop to test the number
+            //}
+            //Console.WriteLine("The sum of even numbers is " + sumOfEven);// print the result
+            //Console.WriteLine("The sum of odd numbers is " + sumOfOdd); // print the result
+
+
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            Console.WriteLine("pless choice a options:\n1 for  sin  \n2 for composite  cos \n" +
+                "3 for tan\n 4 for sqrt \n 5 for log \n  6 for pow ");
+            int choice = int.Parse(Console.ReadLine());
+            double result = 0;
+            switch (choice)
             {
-                if (i % 2 == 0) // test the number if it is an odd or even
-                {
-                    sumOfEven = sumOfEven + i;
-                }
-                else
-                {
-                    sumOfOdd = sumOfOdd + i;
-                }
-             
-            }
-            Console.WriteLine("The sum of even numbers is " + sumOfEven);// print the result
-            Console.WriteLine("The sum of odd numbers is " + sumOfOdd); // print the result
+                case 1:
+                    Console.WriteLine("pleas enter the number ");
+                    double number = double.Parse(Console.ReadLine());
+                    result = Math.Sin(number);
+                    Console.WriteLine("The sin of " + number + " is " + result);
+                    break;
+                case 2:
+                    Console.WriteLine("pleas enter the number ");
+                    double number1 = double.Parse(Console.ReadLine());
+                    result = Math.Cos(number1);
+                    Console.WriteLine("The cos of " + number1 + " is " + result);
+                    break;
+                case 3:
+                    Console.WriteLine("pleas enter the number ");
+                    double number2 = double.Parse(Console.ReadLine());
+                    result = Math.Tan(number2);
+                    Console.WriteLine("The tan of " + number2 + " is " + result);
+                    break;
+                case 4:
+                    Console.WriteLine("pleas enter the number ");
+                    double number3 = double.Parse(Console.ReadLine());
+                    result = Math.Sqrt(number3);
+                    Console.WriteLine("The sqrt of " + number3 + " is " + result);
+                    break;
+                case 5:
+                    Console.WriteLine("pleas enter the number ");
+                    double number4 = double.Parse(Console.ReadLine());
+                    result = Math.Log(number4);
+                    Console.WriteLine("The log of " + number4 + " is " + result);
+                    break;
+                case 6:
+                    Console.WriteLine("pleas enter the number ");
+                    double number5 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("pleas enter the power ");
+                    double power = double.Parse(Console.ReadLine());
+                    result = Math.Pow(number5, power);
+                    Console.WriteLine("The pow of " + number5 + " is " + result);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
 
+
+
+            }
+            
         }
     }
 }
