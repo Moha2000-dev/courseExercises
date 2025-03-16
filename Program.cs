@@ -368,58 +368,66 @@ namespace tasks
 
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
-            Console.WriteLine("pless choice a options:\n1 for  sin  \n2 for composite  cos \n" +
-                "3 for tan\n 4 for sqrt \n 5 for log \n  6 for pow ");
-            int choice = int.Parse(Console.ReadLine());
-            double result = 0;
-            switch (choice)
+            //Console.WriteLine("pless choice a options:\n1 for  sin  \n2 for composite  cos \n" +
+            //    "3 for tan\n 4 for sqrt \n 5 for log \n  6 for pow ");
+            //int choice = int.Parse(Console.ReadLine());
+            //double result = 0;
+            //switch (choice)
+            //{
+            //    case 1:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number = double.Parse(Console.ReadLine());
+            //        result = Math.Sin(number);
+            //        Console.WriteLine("The sin of " + number + " is " + result);
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number1 = double.Parse(Console.ReadLine());
+            //        result = Math.Cos(number1);
+            //        Console.WriteLine("The cos of " + number1 + " is " + result);
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number2 = double.Parse(Console.ReadLine());
+            //        result = Math.Tan(number2);
+            //        Console.WriteLine("The tan of " + number2 + " is " + result);
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number3 = double.Parse(Console.ReadLine());
+            //        result = Math.Sqrt(number3);
+            //        Console.WriteLine("The sqrt of " + number3 + " is " + result);
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number4 = double.Parse(Console.ReadLine());
+            //        result = Math.Log(number4);
+            //        Console.WriteLine("The log of " + number4 + " is " + result);
+            //        break;
+            //    case 6:
+            //        Console.WriteLine("pleas enter the number ");
+            //        double number5 = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("pleas enter the power ");
+            //        double power = double.Parse(Console.ReadLine());
+            //        result = Math.Pow(number5, power);
+            //        Console.WriteLine("The pow of " + number5 + " is " + result);
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid choice");
+            //        break;
+
+
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            Console.WriteLine("pleas enter the number of P and print the angeld  ");
+            int starse = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= starse; i++)
             {
-                case 1:
-                    Console.WriteLine("pleas enter the number ");
-                    double number = double.Parse(Console.ReadLine());
-                    result = Math.Sin(number);
-                    Console.WriteLine("The sin of " + number + " is " + result);
-                    break;
-                case 2:
-                    Console.WriteLine("pleas enter the number ");
-                    double number1 = double.Parse(Console.ReadLine());
-                    result = Math.Cos(number1);
-                    Console.WriteLine("The cos of " + number1 + " is " + result);
-                    break;
-                case 3:
-                    Console.WriteLine("pleas enter the number ");
-                    double number2 = double.Parse(Console.ReadLine());
-                    result = Math.Tan(number2);
-                    Console.WriteLine("The tan of " + number2 + " is " + result);
-                    break;
-                case 4:
-                    Console.WriteLine("pleas enter the number ");
-                    double number3 = double.Parse(Console.ReadLine());
-                    result = Math.Sqrt(number3);
-                    Console.WriteLine("The sqrt of " + number3 + " is " + result);
-                    break;
-                case 5:
-                    Console.WriteLine("pleas enter the number ");
-                    double number4 = double.Parse(Console.ReadLine());
-                    result = Math.Log(number4);
-                    Console.WriteLine("The log of " + number4 + " is " + result);
-                    break;
-                case 6:
-                    Console.WriteLine("pleas enter the number ");
-                    double number5 = double.Parse(Console.ReadLine());
-                    Console.WriteLine("pleas enter the power ");
-                    double power = double.Parse(Console.ReadLine());
-                    result = Math.Pow(number5, power);
-                    Console.WriteLine("The pow of " + number5 + " is " + result);
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
-
-
+               
+                    Console.WriteLine(new string('*',i));
+                
 
             }
-            
-        }
+
+    }
     }
 }
