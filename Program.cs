@@ -438,24 +438,24 @@ namespace tasks
             //}
 
             //]----------------------------------------------------------------------------------------------------------------------------------------------
-            Console.Write("Please enter the number of stars: ");
-            int stars = int.Parse(Console.ReadLine());
+            //Console.Write("Please enter the number of stars: ");
+            //int stars = int.Parse(Console.ReadLine());
 
-            int count = stars * 2 - 1; // Total number of rows
+            //int count = stars * 2 - 1; /
 
-            for (int i = 1; i <= count; i++)
-            {
-                if (i <= stars) // Upper half including middle row
-                {
-                    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
-                }
-                else // Lower half (mirror of upper)
-                {
-                    int j = count - i + 1; // Mirror index to decrease stars
-                    Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
-                }
+            //for (int i = 1; i <= count; i++)
+            //{
+            //    if (i <= stars) 
+            //    {
+            //        Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+            //    }
+            //    else 
+            //    {
+            //        int j = count - i + 1; 
+            //        Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+            //    }
 
-            }
+            //}
 
 
 
