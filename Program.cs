@@ -438,43 +438,57 @@ namespace tasks
             //}
 
             //]----------------------------------------------------------------------------------------------------------------------------------------------
-            //Console.WriteLine("pleas enter the numper of stars  ");
-            //int stars = int.Parse(Console.ReadLine());
+            Console.Write("Please enter the number of stars: ");
+            int stars = int.Parse(Console.ReadLine());
 
-            //for (int i = 1  ; i <= stars; i++)
-            //{
-            //    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+            int count = stars * 2 - 1; // Total number of rows
 
-            //}
+            for (int i = 1; i <= count; i++)
+            {
+                if (i <= stars) // Upper half including middle row
+                {
+                    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+                }
+                else // Lower half (mirror of upper)
+                {
+                    int j = count - i + 1; // Mirror index to decrease stars
+                    Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+                }
 
-
-
-
-            //]--------------------------------------------------------------------------------------------------------------------------------------------
-            //Console.WriteLine("pleas guss a number btween 1 and 100  ");
-            //int number = new Random().Next(1, 100);
-            //int guss = 0;
-            //int count = 0;
-            //while (guss != number)
-            //{
-            //    guss = int.Parse(Console.ReadLine());
-            //    count++;
-            //    if (guss > number)
-            //    {
-            //        Console.WriteLine("The number is too high");
-            //    }
-            //    else if (guss < number)
-            //    {
-            //        Console.WriteLine("The number is too low");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("You gussed the number in " );
-            //    }
-            //}
+            }
 
 
 
-        }
+
+
+
+
+
+                //]--------------------------------------------------------------------------------------------------------------------------------------------
+                //Console.WriteLine("pleas guss a number btween 1 and 100  ");
+                //int number = new Random().Next(1, 100);
+                //int guss = 0;
+                //int count = 0;
+                //while (guss != number)
+                //{
+                //    guss = int.Parse(Console.ReadLine());
+                //    count++;
+                //    if (guss > number)
+                //    {
+                //        Console.WriteLine("The number is too high");
+                //    }
+                //    else if (guss < number)
+                //    {
+                //        Console.WriteLine("The number is too low");
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("You gussed the number in " + count + " attempts");
+                //    }
+                //}
+
+
+
+            }
     }
 }
