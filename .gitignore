@@ -361,3 +361,21 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/tasks/CopilotIndices/17.13.433.20974/CodeChunks.db
+/.vs/tasks/CopilotIndices/17.13.433.20974/CodeChunks.db
+/.vs/tasks/CopilotIndices/17.13.433.20974/CodeChunks.db-shm
+/.vs/tasks/CopilotIndices/17.13.433.20974/CodeChunks.db-wal
+/.vs/tasks/CopilotIndices/17.13.433.20974/SemanticSymbols.db
+/.vs/tasks/CopilotIndices/17.13.433.20974/SemanticSymbols.db-shm
+/.vs/tasks/CopilotIndices/17.13.433.20974/SemanticSymbols.db-wal
+/bin/Debug/net8.0/tasks.dll
+/bin/Debug/net8.0/tasks.exe
+/bin/Debug/net8.0/tasks.pdb
+/obj/Debug/net8.0/ref/tasks.dll
+/obj/Debug/net8.0/refint/tasks.dll
+/obj/Debug/net8.0/apphost.exe
+/obj/Debug/net8.0/tasks.AssemblyInfo.cs
+/obj/Debug/net8.0/tasks.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/tasks.dll
+/obj/Debug/net8.0/tasks.pdb
+/obj/Debug/net8.0/tasks.sourcelink.json
