@@ -57,7 +57,7 @@ namespace tasks
             //Console.WriteLine("pleas enter the price  ");// asking the user to write a celsius 
             //price = int.Parse(Console.ReadLine());//save the celsius in the counter
             //if (price >100) {  discount = (price * 0.1);
-                   //price=price-discount
+            //price=price-discount
             //    Console.WriteLine(discount + " is  the  new price  "); }
             //else {
 
@@ -158,64 +158,213 @@ namespace tasks
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
 
-            double number1 ;
-            double number2;
-            string opreater; 
-            Console.WriteLine("pleas enter number1");
-            number1 = double.Parse(Console.ReadLine());
-            Console.WriteLine("pleas enter number2");
-            number2 = double.Parse(Console.ReadLine());
-            Console.WriteLine("pleas enter opreater");
-            opreater =Console.ReadLine();
+            //double number1 ;
+            //double number2;
+            //string opreater; 
+            //Console.WriteLine("pleas enter number1");
+            //number1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("pleas enter number2");
+            //number2 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("pleas enter opreater");
+            //opreater =Console.ReadLine();
 
-            if (opreater == "+")
-            {
-               
-                Console.WriteLine(number1+number2);
+            //if (opreater == "+")
+            //{
 
-            }
-            else if (opreater == "-")
-            {
-                Console.WriteLine(number1 - number2);
+            //    Console.WriteLine(number1+number2);
 
-
-
-
-                }
-            else if (opreater == "*")
-            {
-                Console.WriteLine(number1 * number2);
+            //}
+            //else if (opreater == "-")
+            //{
+            //    Console.WriteLine(number1 - number2);
 
 
 
 
-            }
-            else if (opreater == "/")
-            {
-                Console.WriteLine(number1 / number2);
+            //    }
+            //else if (opreater == "*")
+            //{
+            //    Console.WriteLine(number1 * number2);
 
 
 
 
-            }
+            //}
+            //else if (opreater == "/")
+            //{
+            //    Console.WriteLine(number1 / number2);
 
-            else  {
 
-         
-                Console.WriteLine(" out of scope" );
 
-            }
+
+            //}
+
+            //else  {
+
+
+            //    Console.WriteLine(" out of scope" );
+
+            //}
+
+            ////]--------------------------------------------------------------------------------------------------------------------------------------------
+            //// paret2 
+
+            //Console.Clear();
+            //Console.WriteLine("pleas enter the frist number "); // asking the user to write a number
+            //double Number1 = double.Parse(Console.ReadLine());    // save the number in the counter
+            //Console.WriteLine("pleas enter the seconde number ");// asking the user to write a number
+            //double Number2 = double.Parse(Console.ReadLine());// save the number in the counter
+            //Console.WriteLine("pleas enter the operations ( *, / , + , - ) ");// asking the user to write a opreater
+            //char opreation = char.Parse(Console.ReadLine()); // save the opreation in the counter
+
+            //double result = 0; // assingr the result counter
+            //switch (opreation)
+            //{ // test the opreation
+
+
+            //    case '+':
+            //        result = Number1 + Number2;
+            //        break;
+
+            //    case '-':
+            //        result = Number1 - Number2;
+            //        break;
+
+            //    case '*':
+            //        result = Number1 * Number2;
+            //        break;
+
+            //    case '/' :
+
+            //        if (Number2 == 0)
+            //        {
+            //            Console.WriteLine("Division by zero not allowed");
+
+
+            //        }
+            //        else
+            //        {
+            //            result = Number1 / Number2;
+            //        }
+            //        break;
+            //    default:
+
+            //        Console.WriteLine("Invalid operation");
+            //        break;
+            //}
+
+
+            //Console.WriteLine("The result is " + result);// print the result
+
+
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.Clear();
+            //Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+            //    "3 for cheak balance \n4 to exsit  ");
+            //int choice = int.Parse(Console.ReadLine());
+            //double balance = 1000;
+            //switch (choice) { 
 
+            // case 1:
+            //        Console.WriteLine("pleas enter the amount you want to withdraw ");
+            //        double withdraw = double.Parse(Console.ReadLine());
+            //        if (withdraw > balance)
+            //        {
+            //            Console.WriteLine("no balance");
+            //        }
+            //        else
+            //        {
+            //            balance =balance- withdraw;
+            //            Console.WriteLine("your balanc " + balance);
+            //        }
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("pleas enter the amount you want to deposit ");
+            //        double deposit = double.Parse(Console.ReadLine());
+            //        balance = balance+deposit;
+            //        Console.WriteLine("The balance after deposit is " + balance);
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("The balance is " + balance);
+            //        break;
+            //    case 4:
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid choice");
+            //        break;
 
+            //}
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.Clear();
+            //Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+            //    "3 for cheak balance");
+            //int choice = int.Parse(Console.ReadLine());
 
+            //switch (choice)
+            //{
 
+            //    case 1: // if the user enter number 1
+            //        double pi = 3.14; // assingr the pi counter
+            //        Console.WriteLine("pless enter the  radius "); // asking the user to write a number
+            //        double radius = double.Parse(Console.ReadLine()); // save the number in the counter
+            //        double area = pi * radius * radius;
+            //        double circumference = 2 * pi * radius;
+            //        Console.WriteLine("The area of the circle is " + area);// print the result
+            //        Console.WriteLine("The circumference of the circle is " + circumference); // print the result
+            //        break;
+            //    case 2: // if the user enter number 2
+            //        Console.WriteLine("pleas enter the length ");
+            //        double length = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("pleas enter the width ");
+            //        double width = double.Parse(Console.ReadLine());
+            //        double area1 = length * width;
+            //        double perimeter = 2 * (length + width);
+            //        Console.WriteLine("The area of the rectangle is " + area1);
+            //        Console.WriteLine("The perimeter of the rectangle is " + perimeter);
+            //        break;
+            //    case 3:// if the user enter number 3
+            //        Console.WriteLine("pleas enter the base ");
+            //        double bases = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("pleas enter the height ");
+            //        double height = double.Parse(Console.ReadLine());
+            //        double area2 = 0.5 * bases * height;
+            //        Console.WriteLine("The area of the triangle is " + area2);
+            //        break;
+            //    default:// if the user enter a wrong choice
+            //        Console.WriteLine("Invalid choice");
+            //        break;
 
+            //}
 
+            //]--------------------------------------------------------------------------------------------------------------------------------------------
+            //Console.WriteLine("pleas enter the  factorial number  ");
+            //int number = int.Parse(Console.ReadLine());
+            //int fact = 1;
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    fact= fact * i;
+            //}
+            //Console.WriteLine("The factorial of " + number +"\nis   "+fact);
 
-
-
+            Console.WriteLine("pless enter a number ");// asking the user to write a number
+            int number = int.Parse(Console.ReadLine());// save the number in the counter
+            int sumOfEven = 0; // assingr the sum of even counter
+            int sumOfOdd = 0;// assingr the sum of odd counter
+            for (int i = 0; i <=number; i++) // loop to test the number
+            {
+                if (i % 2 == 0) // test the number if it is an odd or even
+                {
+                    sumOfEven = sumOfEven + i;
+                }
+                else
+                {
+                    sumOfOdd = sumOfOdd + i;
+                }
+             
+            }
+            Console.WriteLine("The sum of even numbers is " + sumOfEven);// print the result
+            Console.WriteLine("The sum of odd numbers is " + sumOfOdd); // print the result
 
         }
     }
