@@ -259,53 +259,54 @@ namespace tasks
 
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
-            
-            int flage=0;
-            double balance = 1000;
-            do {
-                Console.Clear();
-                Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
-                "3 for cheak balance \n4 to exsit  ");
-            int choice = int.Parse(Console.ReadLine());
-          
-            switch (choice)
-            {
 
-                case 1:
-                    Console.WriteLine("pleas enter the amount you want to withdraw ");
-                    double withdraw = double.Parse(Console.ReadLine());
-                    if (withdraw > balance)
-                    {
-                        Console.WriteLine("no balance");
-                    }
-                    else
-                    {
-                        balance = balance - withdraw;
-                        Console.WriteLine("your balanc " + balance);
-                    }
-                    break;
-                case 2:
-                    Console.WriteLine("pleas enter the amount you want to deposit ");
-                    double deposit = double.Parse(Console.ReadLine());
-                    balance = balance + deposit;
-                    Console.WriteLine("The balance after deposit is " + balance);
-                    break;
-                case 3:
-                    Console.WriteLine("The balance is " + balance);
-                    break;
-                case 4:
-                        flage = 4;
-                        break;
-                default:
-                    Console.WriteLine("Invalid choice");
-                    break;
+            //int flage = 0;
+            //double balance = 1000;
+            //do
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+            //    "3 for cheak balance \n4 to exsit  ");
+            //    int choice = int.Parse(Console.ReadLine());
 
-            }
+            //    switch (choice)
+            //    {
 
-                Console.WriteLine("\nPress any key to continue");
-                Console.ReadKey();
+            //        case 1:
+            //            Console.WriteLine("pleas enter the amount you want to withdraw ");
+            //            double withdraw = double.Parse(Console.ReadLine());
+            //            if (withdraw > balance)
+            //            {
+            //                Console.WriteLine("no balance");
+            //            }
+            //            else
+            //            {
+            //                balance = balance - withdraw;
+            //                Console.WriteLine("your balanc " + balance);
+            //            }
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("pleas enter the amount you want to deposit ");
+            //            double deposit = double.Parse(Console.ReadLine());
+            //            balance = balance + deposit;
+            //            Console.WriteLine("The balance after deposit is " + balance);
+            //            break;
+            //        case 3:
+            //            Console.WriteLine("The balance is " + balance);
+            //            break;
+            //        case 4:
+            //            flage = 4;
+            //            break;
+            //        default:
+            //            Console.WriteLine("Invalid choice");
+            //            break;
 
-            } while (flage != 4);
+            //    }
+
+            //    Console.WriteLine("\nPress any key to continue");
+            //    Console.ReadKey();
+
+            //} while (flage != 4);
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
             //Console.Clear();
@@ -450,26 +451,55 @@ namespace tasks
             //}
 
             //]----------------------------------------------------------------------------------------------------------------------------------------------
+            Console.Write("Please enter the number of stars: ");
+            int stars = int.Parse(Console.ReadLine());
+
+            int count = stars * 2 - 1; 
+
+            for (int i = 1; i <= count; i++)
+            {
+                if (i <= stars)
+                {
+                    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+                }
+                else
+                {
+                    int j = count - i + 1;
+                    Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+                }
+
+            }
+
+            //]------------------------------------------------------------------------
             //Console.Write("Please enter the number of stars: ");
             //int stars = int.Parse(Console.ReadLine());
-
-            //int count = stars * 2 - 1; /
-
-            //for (int i = 1; i <= count; i++)
+            //for (int i = 1; i <= stars; i++)
             //{
-            //    if (i <= stars) 
+            //    for (int j = 1; j <= stars - i; j++)
             //    {
-            //        Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+            //        Console.Write(" ");
             //    }
-            //    else 
+            //    for (int k = 1; k <= 2 * i - 1; k++)
             //    {
-            //        int j = count - i + 1; 
-            //        Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+            //        Console.Write("*");
             //    }
-
+            //    Console.WriteLine();
             //}
+            //for (int i = stars - 1; i >= 1; i--)
+            //{
+            //    for (int j = 1; j <= stars - i; j++)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    for (int k = 1; k <= 2 * i - 1; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
+            //]-----------------------------------------------------------------------------
 
-
+      
 
 
 
@@ -498,6 +528,7 @@ namespace tasks
             //        Console.WriteLine("You gussed the number in " + count + " attempts");
             //    }
             //}
+
 
 
 
