@@ -259,14 +259,15 @@ namespace tasks
 
 
             //]--------------------------------------------------------------------------------------------------------------------------------------------
-            Console.Clear();
-            int flage=0;
-            do { 
             
-            Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+            int flage=0;
+            double balance = 1000;
+            do {
+                Console.Clear();
+                Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
                 "3 for cheak balance \n4 to exsit  ");
             int choice = int.Parse(Console.ReadLine());
-            double balance = 1000;
+          
             switch (choice)
             {
 
@@ -300,7 +301,12 @@ namespace tasks
                     break;
 
             }
-        } while (flage != 4);
+
+                Console.WriteLine("\nPress any key to continue");
+                Console.ReadKey();
+
+            } while (flage != 4);
+
             //]--------------------------------------------------------------------------------------------------------------------------------------------
             //Console.Clear();
             //Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
