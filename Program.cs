@@ -541,6 +541,15 @@ namespace tasks
                 Console.WriteLine("8. Print Pyramid Pattern");
                 Console.WriteLine("9. Print Diamond Pattern");
                 Console.WriteLine("10. Guess the Number Game");
+                Console.WriteLine("11. Arrays");
+                Console.WriteLine("12. Max and Min Numbers");
+                Console.WriteLine("13. Even and Odd Numbers");
+                Console.WriteLine("14. Reverse Array");
+                Console.WriteLine("15. Search Number");
+                Console.WriteLine("16. Sort Array");
+                Console.WriteLine("17. Merge Arrays");
+                Console.WriteLine("18. Remove Duplicates");
+                Console.WriteLine("19. Second Largest Number");
                 Console.WriteLine("0. Exit");
 
                 Console.Write("Enter your choice: ");
@@ -558,6 +567,15 @@ namespace tasks
                     case 8: PrintPyramid(); break;
                     case 9: PrintDiamond(); break;
                     case 10: GuessGame(); break;
+                    case 11: arrayes(); break;
+                    case 12: maxMinNumbers(); break;
+                    case 13: evenAndOdd(); break;
+                    case 14: reversArray(); break;
+                    case 15: searchNumber(); break;
+                    case 16: sortArray(); break;
+                    case 17: meargArry(); break;
+                    case 18:removeDuplicates(); break;
+                    case 19:secondLargest(); break;
                     case 0: return;
                     default: Console.WriteLine("Invalid Choice! Try again."); break;
                 }
@@ -893,6 +911,188 @@ namespace tasks
 
 
         }
+
+        static void arrayes() { 
+               double[] numbers = new double[5];
+            Console.WriteLine("pleas enter the numbers ");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i]= double.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+
+
+
+        }
+        static void maxMinNumbers() {
+            double[] numbers = new double[10];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            Array.Sort(numbers);
+            Console.WriteLine("The max number is " + numbers[numbers.Length - 1]);
+            Console.WriteLine("The min number is " + numbers[0]);
+
+        }
+
+       static void evenAndOdd()
+        {
+          Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            int oddcounts = 0;
+            int evencounts = 0;
+            double[] odd = new double[length];
+            double[] even = new double[length];     
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    even[evencounts] = numbers[i];
+                    evencounts++;
+
+                }
+                else
+                {
+                    odd[oddcounts] = numbers[i];
+                    oddcounts++;
+                    
+                   
+                }
+            }
+            Console.WriteLine("The odd numbers are "+oddcounts+" \n  the arry is :"+string.Join(",",odd));
+
+           Console.WriteLine("The even numbers are " + evencounts + " \nthe arry is :" + string.Join(",", even));
+
+
+
+        }
+
+        static void reversArray()
+        {
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            Array.Reverse(numbers);
+            Console.WriteLine("the revers is : " + string.Join(",",numbers));
+        }
+        static void searchNumber()
+        {
+
+           int[] numbers = {1,2,3,4,5,6,7,8,9};
+
+            Console.WriteLine("pleas add the number youare searching for ");
+            int number = int.Parse(Console.ReadLine());
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] == number)
+                {
+                    Console.WriteLine("The number is found at index " + i);
+
+                    break;
+                }
+            }
+
+
+
+        }
+        static void sortArray()
+        {
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");   
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            Array.Sort(numbers);
+            Console.WriteLine("The sorted array is " + string.Join(",", numbers));
+
+
+
+
+        }
+
+        static void meargArry() {
+
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("pleas enter the length of the second arry ");
+            double[] numbers2 = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers2[i] = double.Parse(Console.ReadLine());
+            }
+
+            int length3 = length + length;
+            double[] mearg = new double[length3];
+            for (int i = 0; i < length; i++)
+            {
+                mearg[i] = numbers[i];
+                mearg[i + length] = numbers2[i];
+            }
+
+            Console.WriteLine("The mearged array is " + string.Join(",", mearg));
+
+        }
+        static void removeDuplicates() {
+
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            double[] unique = numbers.Distinct().ToArray();
+            Console.WriteLine("The unique array is " + string.Join(",", unique));
+
+
+        }
+
+        static void secondLargest()
+        {
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            Array.Sort(numbers);
+            Console.WriteLine("The second largest number is " + numbers[numbers.Length - 2]);
+        }
+
+
+
+
 
     }
 }
