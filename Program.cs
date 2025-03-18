@@ -561,6 +561,8 @@ namespace tasks
                     case 0: return;
                     default: Console.WriteLine("Invalid Choice! Try again."); break;
                 }
+
+                Console.WriteLine("\nPress any key to continue...");
                 Console.ReadLine();
 
             }
