@@ -451,24 +451,24 @@ namespace tasks
             //}
 
             //]----------------------------------------------------------------------------------------------------------------------------------------------
-            Console.Write("Please enter the number of stars: ");
-            int stars = int.Parse(Console.ReadLine());
+            //Console.Write("Please enter the number of stars: ");
+            //int stars = int.Parse(Console.ReadLine());
 
-            int count = stars * 2 - 1; 
+            //int count = stars * 2 - 1; 
 
-            for (int i = 1; i <= count; i++)
-            {
-                if (i <= stars)
-                {
-                    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
-                }
-                else
-                {
-                    int j = count - i + 1;
-                    Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
-                }
+            //for (int i = 1; i <= count; i++)
+            //{
+            //    if (i <= stars)
+            //    {
+            //        Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+            //    }
+            //    else
+            //    {
+            //        int j = count - i + 1;
+            //        Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+            //    }
 
-            }
+            //}
 
             //]------------------------------------------------------------------------
             //Console.Write("Please enter the number of stars: ");
@@ -499,13 +499,6 @@ namespace tasks
             //}
             //]-----------------------------------------------------------------------------
 
-      
-
-
-
-
-
-
             //]--------------------------------------------------------------------------------------------------------------------------------------------
             //Console.WriteLine("pleas guss a number btween 1 and 100  ");
             //int number = new Random().Next(1, 100);
@@ -532,6 +525,372 @@ namespace tasks
 
 
 
+
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("\nSelect a Program:");
+                Console.WriteLine("1. Simple Calculator");
+                Console.WriteLine("2. Basic ATM System");
+                Console.WriteLine("3. Geometry Calculator");
+                Console.WriteLine("4. Factorial of a Number");
+                Console.WriteLine("5. Sum of Even and Odd Numbers");
+                Console.WriteLine("6. Scientific Calculator");
+                Console.WriteLine("7. Print Triangle Pattern");
+                Console.WriteLine("8. Print Pyramid Pattern");
+                Console.WriteLine("9. Print Diamond Pattern");
+                Console.WriteLine("10. Guess the Number Game");
+                Console.WriteLine("0. Exit");
+
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: SimpleCalculator(); break;
+                    case 2: BasicATM(); break;
+                    case 3: GeometryCalculator(); break;
+                    case 4: Factorial(); break;
+                    case 5: SumEvenOdd(); break;
+                    case 6: ScientificCalculator(); break;
+                    case 7: PrintTriangle(); break;
+                    case 8: PrintPyramid(); break;
+                    case 9: PrintDiamond(); break;
+                    case 10: GuessGame(); break;
+                    case 0: return;
+                    default: Console.WriteLine("Invalid Choice! Try again."); break;
+                }
+                Console.ReadLine();
+
+            }
+            }
+        static void SimpleCalculator() {
+
+            Console.Clear();
+            Console.WriteLine("pleas enter the frist number "); // asking the user to write a number
+            double Number1 = double.Parse(Console.ReadLine());    // save the number in the counter
+            Console.WriteLine("pleas enter the seconde number ");// asking the user to write a number
+            double Number2 = double.Parse(Console.ReadLine());// save the number in the counter
+            Console.WriteLine("pleas enter the operations ( *, / , + , - ) ");// asking the user to write a opreater
+            char opreation = char.Parse(Console.ReadLine()); // save the opreation in the counter
+
+            double result = 0; // assingr the result counter
+            switch (opreation)
+            { // test the opreation
+
+
+                case '+':
+                    result = Number1 + Number2;
+                    break;
+
+                case '-':
+                    result = Number1 - Number2;
+                    break;
+
+                case '*':
+                    result = Number1 * Number2;
+                    break;
+
+                case '/':
+
+                    if (Number2 == 0)
+                    {
+                        Console.WriteLine("Division by zero not allowed");
+
+
+                    }
+                    else
+                    {
+                        result = Number1 / Number2;
+                    }
+                    break;
+                default:
+
+                    Console.WriteLine("Invalid operation");
+                    break;
+            }
+
+
+            Console.WriteLine("The result is " + result);// print the result
+
+
+
+
+
         }
+        static void BasicATM() {
+
+            int flage = 0;
+            double balance = 1000;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+                "3 for cheak balance \n4 to exsit  ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+
+                    case 1:
+                        Console.WriteLine("pleas enter the amount you want to withdraw ");
+                        double withdraw = double.Parse(Console.ReadLine());
+                        if (withdraw > balance)
+                        {
+                            Console.WriteLine("no balance");
+                        }
+                        else
+                        {
+                            balance = balance - withdraw;
+                            Console.WriteLine("your balanc " + balance);
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("pleas enter the amount you want to deposit ");
+                        double deposit = double.Parse(Console.ReadLine());
+                        balance = balance + deposit;
+                        Console.WriteLine("The balance after deposit is " + balance);
+                        break;
+                    case 3:
+                        Console.WriteLine("The balance is " + balance);
+                        break;
+                    case 4:
+                        flage = 4;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice");
+                        break;
+
+                }
+
+                Console.WriteLine("\nPress any key to continue");
+                Console.ReadKey();
+
+            } while (flage != 4);
+
+
+
+
+        }
+        static void GeometryCalculator() {
+
+
+            Console.Clear();
+            Console.WriteLine("pleass  choice a  options:\n1 for Withdraw Money \n2 for Deposit Money\n" +
+                "3 for cheak balance");
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+
+                case 1: // if the user enter number 1
+                    double pi = 3.14; // assingr the pi counter
+                    Console.WriteLine("pless enter the  radius "); // asking the user to write a number
+                    double radius = double.Parse(Console.ReadLine()); // save the number in the counter
+                    double area = pi * radius * radius;
+                    double circumference = 2 * pi * radius;
+                    Console.WriteLine("The area of the circle is " + area);// print the result
+                    Console.WriteLine("The circumference of the circle is " + circumference); // print the result
+                    break;
+                case 2: // if the user enter number 2
+                    Console.WriteLine("pleas enter the length ");
+                    double length = double.Parse(Console.ReadLine());
+                    Console.WriteLine("pleas enter the width ");
+                    double width = double.Parse(Console.ReadLine());
+                    double area1 = length * width;
+                    double perimeter = 2 * (length + width);
+                    Console.WriteLine("The area of the rectangle is " + area1);
+                    Console.WriteLine("The perimeter of the rectangle is " + perimeter);
+                    break;
+                case 3:// if the user enter number 3
+                    Console.WriteLine("pleas enter the base ");
+                    double bases = double.Parse(Console.ReadLine());
+                    Console.WriteLine("pleas enter the height ");
+                    double height = double.Parse(Console.ReadLine());
+                    double area2 = 0.5 * bases * height;
+                    Console.WriteLine("The area of the triangle is " + area2);
+                    break;
+                default:// if the user enter a wrong choice
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+            }
+
+
+        }
+        static void Factorial() {
+
+            Console.WriteLine("pleas enter the number of starts and print the angeld  ");
+            int starse = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= starse; i++)
+            {
+
+                Console.WriteLine(new string('*', i));
+
+
+            }
+
+        }
+        static void SumEvenOdd() {
+
+
+
+             Console.WriteLine("pless enter a number ");// asking the user to write a number
+            int number = int.Parse(Console.ReadLine());// save the number in the counter
+            int sumOfEven = 0; // assingr the sum of even counter
+            int sumOfOdd = 0;// assingr the sum of odd counter
+            for (int i = 0; i <= number; i++) // loop to test the number
+            {
+                if (i % 2 == 0) // test the number if it is an odd or even
+                {
+                    sumOfEven = sumOfEven + i;
+                }
+                else
+                {
+                    sumOfOdd = sumOfOdd + i;
+                }
+
+            }
+            Console.WriteLine("The sum of even numbers is " + sumOfEven);// print the result
+            Console.WriteLine("The sum of odd numbers is " + sumOfOdd); // print the result
+
+        }
+
+        static void ScientificCalculator() {
+
+            Console.WriteLine("pless choice a options:\n1 for  sin  \n2 for composite  cos \n" +
+                "3 for tan\n 4 for sqrt \n 5 for log \n  6 for pow ");
+            int choice = int.Parse(Console.ReadLine());
+            double result = 0;
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("pleas enter the number ");
+                    double number = double.Parse(Console.ReadLine());
+                    result = Math.Sin(number);
+                    Console.WriteLine("The sin of " + number + " is " + result);
+                    break;
+                case 2:
+                    Console.WriteLine("pleas enter the number ");
+                    double number1 = double.Parse(Console.ReadLine());
+                    result = Math.Cos(number1);
+                    Console.WriteLine("The cos of " + number1 + " is " + result);
+                    break;
+                case 3:
+                    Console.WriteLine("pleas enter the number ");
+                    double number2 = double.Parse(Console.ReadLine());
+                    result = Math.Tan(number2);
+                    Console.WriteLine("The tan of " + number2 + " is " + result);
+                    break;
+                case 4:
+                    Console.WriteLine("pleas enter the number ");
+                    double number3 = double.Parse(Console.ReadLine());
+                    result = Math.Sqrt(number3);
+                    Console.WriteLine("The sqrt of " + number3 + " is " + result);
+                    break;
+                case 5:
+                    Console.WriteLine("pleas enter the number ");
+                    double number4 = double.Parse(Console.ReadLine());
+                    result = Math.Log(number4);
+                    Console.WriteLine("The log of " + number4 + " is " + result);
+                    break;
+                case 6:
+                    Console.WriteLine("pleas enter the number ");
+                    double number5 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("pleas enter the power ");
+                    double power = double.Parse(Console.ReadLine());
+                    result = Math.Pow(number5, power);
+                    Console.WriteLine("The pow of " + number5 + " is " + result);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+            }   }
+
+        static void PrintTriangle() {
+
+            Console.WriteLine("pleas enter the number of starts and print the angeld  ");
+            int starse = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= starse; i++)
+            {
+
+                Console.WriteLine(new string('*', i));
+
+
+            }
+
+
+        }
+
+
+
+        static void PrintPyramid() {
+
+            Console.WriteLine("pleas enter the numper of stars  ");
+            int stars = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= stars; i++)
+            {
+                Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+            }
+
+
+        }
+
+        static void PrintDiamond() {
+
+            Console.Write("Please enter the number of stars: ");
+            int stars = int.Parse(Console.ReadLine());
+
+            int count = stars * 2 - 1;
+
+            for (int i = 1; i <= count; i++)
+            {
+                if (i <= stars)
+                {
+                    Console.WriteLine(new string(' ', stars - i) + new string('*', i * 2 - 1));
+                }
+                else
+                {
+                    int j = count - i + 1;
+                    Console.WriteLine(new string(' ', stars - j) + new string('*', j * 2 - 1));
+                }
+
+            }
+
+
+
+        }
+
+
+        static void GuessGame() {
+
+            Console.WriteLine("pleas guss a number btween 1 and 100  ");
+            int number = new Random().Next(1, 100);
+            int guss = 0;
+            int count = 0;
+            while (guss != number)
+            {
+                guss = int.Parse(Console.ReadLine());
+                count++;
+                if (guss > number)
+                {
+                    Console.WriteLine("The number is too high");
+                }
+                else if (guss < number)
+                {
+                    Console.WriteLine("The number is too low");
+                }
+                else
+                {
+                    Console.WriteLine("You gussed the number in " + count + " attempts");
+                }
+            }
+
+
+        }
+
     }
 }
