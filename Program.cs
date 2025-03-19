@@ -550,6 +550,7 @@ namespace tasks
                 Console.WriteLine("17. Merge Arrays");
                 Console.WriteLine("18. Remove Duplicates");
                 Console.WriteLine("19. Second Largest Number");
+                Console.WriteLine("20. Remove Duplicates 2");
                 Console.WriteLine("0. Exit");
 
                 Console.Write("Enter your choice: ");
@@ -576,6 +577,7 @@ namespace tasks
                     case 17: meargArry(); break;
                     case 18:removeDuplicates(); break;
                     case 19:secondLargest(); break;
+                    case 20:RemoveDuplicates2(); break;
                     case 0: return;
                     default: Console.WriteLine("Invalid Choice! Try again."); break;
                 }
@@ -1143,7 +1145,7 @@ namespace tasks
 
 
 
-        static void RemoveDuplicates()
+        static void RemoveDuplicates2()
         {
             Console.Write("Enter the number of elements: ");
             int n = int.Parse(Console.ReadLine());
