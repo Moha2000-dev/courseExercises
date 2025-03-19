@@ -1012,6 +1012,57 @@ namespace tasks
 
 
 
+
+
+            //// 6. Search for a Number in an Array
+            //static void SearchNumber()
+            //{
+            //    Console.Write("Enter the number of elements: ");
+            //    int n = int.Parse(Console.ReadLine());
+            //    int[] arr = new int[n];
+
+            //    Console.WriteLine("Enter elements:");
+            //    for (int i = 0; i < n; i++)
+            //        arr[i] = int.Parse(Console.ReadLine());
+
+            //    Console.Write("Enter number to search: ");
+            //    int search = int.Parse(Console.ReadLine());
+
+            //    //int index = Array.IndexOf(arr, search);
+
+            //    int index = -1;
+            //    int[] indexes = new int[arr.Length];
+
+            //    for (int i = 0; i < arr.Length; i++)
+            //    {
+
+            //        if (arr[i] == search)
+            //        {
+            //            // Console.WriteLine(i);
+            //            index = i;
+            //            break;
+            //        }
+            //        //if (arr[i]==search)
+            //        //{
+            //        //    indexes[i] = i;
+            //        //}
+
+
+
+
+            //    }
+
+            //    if (index != -1)
+            //        Console.WriteLine(index);
+            //    else
+            //        Console.WriteLine("not found");
+
+
+
+            //    Console.WriteLine(index == -1 ? "Number not found." : $"Number found at index {index}");
+            //}
+
+
         }
         static void sortArray()
         {
