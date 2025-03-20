@@ -551,6 +551,8 @@ namespace tasks
                 Console.WriteLine("18. Remove Duplicates");
                 Console.WriteLine("19. Second Largest Number");
                 Console.WriteLine("20. Remove Duplicates 2");
+                Console.WriteLine("21. Most Frequent Number");
+                Console.WriteLine("22. Palindrome Array");
                 Console.WriteLine("0. Exit");
 
                 Console.Write("Enter your choice: ");
@@ -578,6 +580,8 @@ namespace tasks
                     case 18:removeDuplicates(); break;
                     case 19:secondLargest(); break;
                     case 20:RemoveDuplicates2(); break;
+                    case 21: mostFrequnceNumber(); break;
+                    case 22: palindromeArray(); break;
                     case 0: return;
                     default: Console.WriteLine("Invalid Choice! Try again."); break;
                 }
@@ -1169,6 +1173,74 @@ namespace tasks
                 if (!isDuplicate) Console.Write(arr[i] + " ");
             }
             Console.WriteLine();
+        }
+
+        static void mostFrequnceNumber() {
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            int[] numbers = new int[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+            int [] frequentNumber =new int[length];
+            for (int i = 0; i < frequentNumber.Length; i++) {
+                for (int j = 0; j < frequentNumber.Length; j++)
+                {
+                    if (numbers[i] == numbers[j])
+                    {
+                        frequentNumber[i] = numbers[i];
+
+
+                    }
+                }   
+
+            }
+            Array.Sort(frequentNumber);
+            Console.WriteLine("The most smallest  frequent number is " + frequentNumber[0]);
+
+
+
+
+
+
+
+        }
+
+
+        static void palindromeArray()
+        {
+            Console.WriteLine("pleas enter the length of the arry ");
+            int length = int.Parse(Console.ReadLine());
+            double[] numbers = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("pleas enter the number ");
+                numbers[i] = double.Parse(Console.ReadLine());
+            }
+            double[] reverse = new double[length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                reverse[i] = numbers[length - i - 1]; 
+            }
+            bool isPalindrome = true;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] != reverse[i])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome)
+            {
+                Console.WriteLine("The array is a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("The array is not a palindrome");
+            }
         }
 
     }
